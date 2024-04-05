@@ -12,7 +12,10 @@ const UserRepositories = ({ repositories }) => {
               <ul className="list-group list-group-flush">
                 {repositories.map((repo) => (
                   <li key={repo.id} className="list-group-item">
-                    <a href={repo.html_url}>{repo.name}</a>: {repo.description}
+                    <a target="_blank" href={repo.html_url}>
+                      {repo.name}
+                    </a>
+                    : {repo.description}
                   </li>
                 ))}
               </ul>
